@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class TasksController extends Controller
 {
   public function index(){
-    // $allEmployees = EmployeesModel::all();
+    $allEmployees = EmployeesModel::all();
     $allTasks = TasksModel::all();
 
-    return view('home', compact('allTasks'));
+    return view('home', compact('allEmployees','allTasks'));
   }
 }
