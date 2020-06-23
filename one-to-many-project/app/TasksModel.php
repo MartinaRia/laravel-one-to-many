@@ -11,4 +11,5 @@ class TasksModel extends Model
   public function employee(){  //nomeFunzione = tabellaonealsingolare
    return $this -> belongsTo(EmployeesModel::class);
   }
+
 }

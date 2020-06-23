@@ -11,4 +11,9 @@ class EmployeesModel extends Model
   public function tasks(){ //nomeFunziones = tabellamanyalplurale
 	   return $this -> hasMany(TasksModel::class);
   }
+
+  public function locations(){  //nomeFunzione = tabellamanyalplurale
+   return $this -> belongsToMany(LocationsModel::class);
+  }
+  
 }
