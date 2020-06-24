@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\LocationsModel;
 use Faker\Generator as Faker;
+use App\LocationsModel;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(LocationsModel::class, function (Faker $faker) {
     return [
       'street' => $faker  -> streetAddress(),
       'city' => $faker  -> city(),
