@@ -3,9 +3,9 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use Faker\Generator as Faker;
-use App\EmployeesModel;
+use App\Employee;
 
-$factory->define(EmployeesModel::class, function (Faker $faker) {
+$factory->define(Employee::class, function (Faker $faker) {
     return [
       'firstname' => $faker  -> firstName(),
       'lastname' => $faker  -> lastName(),

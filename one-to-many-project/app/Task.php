@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TasksModel extends Model
+class Task extends Model
 {
   protected $table = 'tasks';
 
   public function employee(){  //nomeFunzione = tabellaonealsingolare
-   return $this -> belongsTo(EmployeesModel::class);
+   return $this -> belongsTo(Employee::class);
   }
 
 }

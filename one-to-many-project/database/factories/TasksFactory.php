@@ -3,9 +3,9 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use Faker\Generator as Faker;
-use App\TasksModel;
+use App\Task;
 
-$factory->define(TasksModel::class, function (Faker $faker) {
+$factory->define(Task::class, function (Faker $faker) {
     return [
       'name' => $faker  -> catchPhrase(),
       'description' => $faker  -> text(),
