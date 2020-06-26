@@ -8,5 +8,8 @@ Route::get('/', function(){
 
 // task
 Route::get('/tasksindex', 'TasksController@tasksIndex')->name('tasks-list');
-Route::post('/store', 'TasksController@taskStore')->name('task-store');
-// Route::get('/taskdetails/{id}', 'TasksController@taskShow')->name('task-show');
+Route::post('/task-store', 'TasksController@taskStore')->name('task-store');
+Route::get('/task-show/{id}', 'TasksController@taskShow')->name('task-show');
+Route::get('/task-edit/{id}', 'TasksController@taskEdit')->name('task-edit');
+Route::post('/task-update/{id}', 'TasksController@taskUpdate')->name('task-update');
+Route::get('/task-show/delete/{id}', 'TasksController@taskDestroy')->name('task-destroy');

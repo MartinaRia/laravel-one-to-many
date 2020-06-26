@@ -11,7 +11,7 @@
           <br>
           @foreach ($allTasks as $task)
           <div class="list">
-            <a href="" class="">
+            <a href="{{route('task-show', $task['id'])}}" class="">
               <h4>{{ $task['name'] }}: </h4>
               <p>{{ $task['description'] }}</p>
               <h5>Employee assigned: {{ $task['employee']['firstname'] }} {{ $task['employee']['lastname'] }}</h5>
