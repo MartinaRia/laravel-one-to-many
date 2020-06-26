@@ -222,6 +222,14 @@ main{
     border: 1px solid $thin-color;
     border-radius: 2px;
   }
+
+  input[type=checkbox]{
+    width: 25px;
+  }
+
+  h4{
+    margin-top: 5px;
+  }
 }
 
 .home-button{

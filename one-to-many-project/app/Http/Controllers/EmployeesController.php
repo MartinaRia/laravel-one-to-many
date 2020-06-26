@@ -7,29 +7,33 @@ use App\Location;
 
 use Illuminate\Http\Request;
 
-class TasksController extends Controller
+class EmployeesController extends Controller
 {
   // INDEX -------------
-  public function tasksIndex(){
-    $allTasks = Task::all();
+  public function employeesIndex(){
     $allEmployees = Employee::all();
+    $allTasks = Task::all();
+    $allLocations = Location::all();
 
-    return view('tasksindex', compact('allTasks', 'allEmployees'));
+    return view('employeesindex', compact('allEmployees', 'allTasks', 'allLocations'));
   }
 
   // STORE -----------------
-  public function taskStore(Request $request){
+  public function employeeStore(Request $request){
     $data = $request -> all();
-    $task = new Task;
+    $employee = new Employee;
 
-    $task -> name = $data['name'];
-    $task -> description = $data['description'];
-    $task -> deadline = $data['deadline'];
-    $task -> employee_id = $data['employee_id'];
+    // dd($data);
 
-    $task ->save();
+    $employee -> firstname = $data['firstname'];
+    $employee -> lastname = $data['lastname'];
+    $employee -> dateOfBirth = $data['dateOfBirth'];
+    $employee -> role = $data['role'];
 
-    return redirect() -> route ('tasks-list');
+    $employee ->save();
+    $employee->locations()->attach($request-> locations);
+
+    return redirect() -> route ('employees-list');
   }
 
   // SHOW ---------------------
@@ -70,5 +74,4 @@ class TasksController extends Controller
 
       return redirect() -> route('tasks-list');
     }
-    
 }

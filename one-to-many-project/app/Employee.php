@@ -13,7 +13,7 @@ class Employee extends Model
   }
 
   public function locations(){  //nomeFunzione = tabellamanyalplurale
-   return $this -> belongsToMany(LocationsModel::class);
+   return $this -> belongsToMany(Location::class);
   }
 
 }

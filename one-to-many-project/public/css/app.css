@@ -203,6 +203,16 @@ main section .main-container ul a:hover {
   border-radius: 2px;
 }
 
+.form-store input[type=checkbox],
+.form-edit input[type=checkbox] {
+  width: 25px;
+}
+
+.form-store h4,
+.form-edit h4 {
+  margin-top: 5px;
+}
+
 .home-button {
   text-decoration: none;
   padding: 10px;

@@ -9,7 +9,7 @@
     <br>
     <div class="home-container flex-container">
       <a class="home-button" href="{{route('tasks-list')}}">TASKS</a>
-      <a class="home-button" href="#">EMPLOYEES</a>
+      <a class="home-button" href="{{route('employees-list')}}">EMPLOYEES</a>
       <a class="home-button" href="#">LOCATIONS</a>
   </div>
 
