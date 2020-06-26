@@ -24,15 +24,15 @@
         <div class="form-store">
           <h3>ADD NEW TASK</h3>
           <br>
-          <form action="" method="post">
+          <form action="{{route('task-store')}}" method="post">
             @csrf
             @method('POST')
 
             <input placeholder="Name" type="text" name="name" value="">
             <textarea placeholder="Description" name="description" rows="8"></textarea>
-            <select class="" name="">
+            <select class="" name="employee_id">
               @foreach ($allEmployees as $employee)
-                <option value="{{$employee['id']}}">{{$employee['firstname']}} {{$employee['lastname']}}</option>
+                <option value="{{$employee -> id}}"> {{$employee['firstname']}} {{$employee['lastname']}}</option>
               @endforeach
             </select>
             <input placeholder="Deadline" type="date" name="deadline" value="">
