@@ -136,47 +136,33 @@ main section .main-container ul a:hover {
   vertical-align: middle;
 }
 
-.pasta-img {
-  max-width: 100%;
-  margin: 5px auto;
-}
+/*---- details --- */
 
-.numbers-display {
-  flex-wrap: wrap;
-}
-
-.number-container {
-  padding: 10px 15px;
-  background: #d3d3d391;
-  border-radius: 4px;
-  margin: 2px;
-}
-
-.container-home {
+.container-main-content {
   width: 100%;
   justify-content: space-around;
 }
 
-.omini-container {
-  width: 50%;
+.list-container {
+  width: 60%;
 }
 
-.omini-list {
+.list {
   margin-bottom: 10px;
   width: 100%;
 }
 
-.omini-list a {
+.list a {
   text-decoration: none;
   color: inherit;
   align-items: baseline;
 }
 
-.omini-list a:hover {
+.list a:hover {
   color: #bc008d;
 }
 
-.omini-list p {
+.list p {
   margin-right: 10px;
   margin-bottom: 10px;
 }
@@ -195,17 +181,43 @@ main section .main-container ul a:hover {
   background: #d3d3d391;
 }
 
+.modification-button a:hover {
+  background: #d3d3d3;
+}
+
 .form-store,
 .form-edit {
-  width: 50%;
+  width: 40%;
 }
 
 .form-store input,
-.form-edit input {
+.form-store textarea,
+.form-store select,
+.form-edit input,
+.form-edit textarea,
+.form-edit select {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #d3d3d391;
   border-radius: 2px;
+}
+
+.home-button {
+  text-decoration: none;
+  padding: 10px;
+  margin: 0px 5px;
+  border: 1px solid #bc008d;
+  border-radius: 2px;
+  color: #bc008d;
+  background: #d3d3d391;
+}
+
+.home-button:hover {
+  background: #d3d3d3;
+}
+
+.home-container {
+  justify-content: center;
 }
 

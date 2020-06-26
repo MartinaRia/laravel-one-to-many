@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 
 class TasksController extends Controller
 {
-  public function index(){
-    $allEmployees = Employee::all();
+  public function tasksIndex(){
     $allTasks = Task::all();
+    $allEmployees = Employee::all();
 
-    return view('home', compact('allEmployees','allTasks'));
+    return view('tasksindex', compact('allTasks', 'allEmployees'));
   }
 }
