@@ -1,44 +1,43 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
 use App\Employee;
 use App\Task;
 use App\Location;
 
-use Illuminate\Http\Request;
 
-class EmployeesController extends Controller
+class LocationsController extends Controller
 {
   // INDEX -------------
-  public function employeesIndex(){
+  public function locationsIndex(){
     $allEmployees = Employee::all();
-    $allTasks = Task::all();
     $allLocations = Location::all();
 
-    return view('employeesindex', compact('allEmployees', 'allTasks', 'allLocations'));
+    return view('locationsindex', compact('allEmployees', 'allLocations'));
   }
 
   // STORE -----------------
-  public function employeeStore(Request $request){
+  public function locationStore(Request $request){
     $data = $request -> all();
-    $employee = new Employee;
+    $location = new Location;
 
-    $employee -> firstname = $data['firstname'];
-    $employee -> lastname = $data['lastname'];
-    $employee -> dateOfBirth = $data['dateOfBirth'];
-    $employee -> role = $data['role'];
+    $location -> street = $data['street'];
+    $location -> city = $data['city'];
+    $location -> state = $data['state'];
 
-    $employee ->save();
-    $employee->locations()->attach($request-> locations);
+    $location ->save();
+    $location->employees()->attach($request-> employees);
 
-    return redirect() -> route ('employees-list');
+    return redirect() -> route ('locations-list');
   }
 
   // SHOW ---------------------
-  public function employeeShow($id){
-    $employee = Employee::findOrFail($id);
+  public function locationShow($id){
+    $location = Location::findOrFail($id);
 
-    return view('employee-show', compact('employee'));
+    return view('location-show', compact('location'));
   }
 
 
@@ -66,10 +65,10 @@ class EmployeesController extends Controller
   }*/
 
     // DELETE ---------------------
-    public function employeeDestroy($id){
-      $employee = Employee::findOrFail($id);
-      $employee -> delete();
+    public function locationDestroy($id){
+      $location = Location::findOrFail($id);
+      $location -> delete();
 
-      return redirect() -> route('employees-list');
+      return redirect() -> route('locations-list');
     }
 }

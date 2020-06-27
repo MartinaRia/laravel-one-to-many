@@ -11,7 +11,7 @@
       <h4>DESCRIPTION: </h4>
       <p>{{ $task['description'] }}</p>
       <h4>EMPLOYEE ASSIGNED: </h4>
-      <p>{{ $task -> employee -> firstname}} {{ $task -> employee -> lastname}} </p>
+      <p><a href="{{route('employee-show', $task -> employee -> id)}}">{{ $task -> employee -> firstname}} {{ $task -> employee -> lastname}} </p></a>
     </div>
     <div class="modification-button flex-container">
       <a href="{{route('task-destroy', $task['id'])}}">DELETE THIS TASK</a>

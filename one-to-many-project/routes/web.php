@@ -16,4 +16,12 @@ Route::get('/task-show/delete/{id}', 'TasksController@taskDestroy')->name('task-
 
 // employee ---------------------
 Route::get('/employeesindex', 'EmployeesController@employeesIndex')->name('employees-list');
-Route::post('/esmployee-store', 'EmployeesController@employeeStore')->name('employee-store');
+Route::post('/employee-store', 'EmployeesController@employeeStore')->name('employee-store');
+Route::get('/employee-show/{id}', 'EmployeesController@employeeShow')->name('employee-show');
+Route::get('/employee-show/delete/{id}', 'EmployeesController@employeeDestroy')->name('employee-destroy');
+
+// location ---------------------
+Route::get('/locationsindex', 'LocationsController@locationsIndex')->name('locations-list');
+Route::post('/location-store', 'LocationsController@locationStore')->name('location-store');
+Route::get('/location-show/{id}', 'LocationsController@locationShow')->name('location-show');
+Route::get('/location-show/delete/{id}', 'LocationsController@locationDestroy')->name('location-destroy');

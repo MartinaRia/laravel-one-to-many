@@ -11,7 +11,7 @@
           <br>
           @foreach ($allEmployees as $employee)
           <div class="list">
-            <a href="" class="">
+            <a href="{{route('employee-show', $employee['id'])}}" class="">
               <p>{{ $employee['firstname'] }} {{$employee['lastname']}} </p>
               <br>
             </a>

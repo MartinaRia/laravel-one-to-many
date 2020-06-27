@@ -37,6 +37,9 @@
           <nav>
             <ul>
               <a href= "{{route('home')}}"><li>HOME</li></a>
+              <a href= "{{route('tasks-list')}}"><li>TASKS</li></a>
+              <a href= "{{route('employees-list')}}"><li>EMPLOYEES</li></a>
+              <a href= "{{route('locations-list')}}"><li>LOCATIONS</li></a>
             </ul>
           </nav>
         </div>
